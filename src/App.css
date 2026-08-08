@@ -495,3 +495,504 @@
     flex-direction: column;
   }
 }
+/* =========================================================
+   MOBILE RESPONSIVE IMPROVEMENTS
+   ========================================================= */
+
+@media (max-width: 768px) {
+  /* Main container */
+  .app-main {
+    width: min(94vw, 680px);
+    padding: 24px 0 40px;
+  }
+
+  /* Header */
+  .topbar {
+    padding: 12px 3vw;
+    gap: 10px;
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand-name {
+    font-size: 15px;
+  }
+
+  .nav-links {
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  /* Search */
+  .header-actions {
+    width: 100%;
+    display: flex;
+  }
+
+  .search-wrap {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-menu,
+  .search-error,
+  .search-loading {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Location */
+  .location-bar {
+    gap: 12px;
+  }
+
+  .location-name {
+    font-size: 16px;
+  }
+
+  .location-actions {
+    width: 100%;
+  }
+
+  /* Current weather hero */
+  .hero-card {
+    grid-template-columns: 1fr;
+    padding: 24px 20px;
+    min-height: auto;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(28px, 8vw, 36px);
+    line-height: 1.05;
+  }
+
+  .hero-temp-row {
+    margin: 24px 0 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .hero-temp {
+    font-size: clamp(54px, 16vw, 72px);
+  }
+
+  .hero-feels {
+    font-size: 11px;
+  }
+
+  .hero-mini-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .hero-mini-grid div {
+    min-width: 0;
+  }
+
+  .hero-mini-grid span {
+    min-width: 0;
+  }
+
+  .hero-mini-grid strong {
+    font-size: 11px;
+  }
+
+  .hero-visual {
+    min-height: 190px;
+  }
+
+  .weather-emoji-xl {
+    font-size: 95px;
+  }
+
+  .sun-orbit {
+    width: 190px;
+    height: 190px;
+  }
+
+  .sun-times {
+    bottom: 0;
+    font-size: 9px;
+  }
+
+  /* Dashboard columns */
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .main-column,
+  .side-column {
+    gap: 14px;
+    min-width: 0;
+  }
+
+  /* Panels */
+  .panel {
+    padding: 16px;
+    border-radius: 15px;
+  }
+
+  .section-heading {
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .section-heading h2 {
+    font-size: 17px;
+  }
+
+  /* Hourly forecast */
+  .hourly-strip {
+    display: flex;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    padding-bottom: 3px;
+  }
+
+  .hourly-strip::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hour-item {
+    flex: 0 0 72px;
+  }
+
+  /* Chart */
+  .chart-area {
+    height: 210px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Daily forecast */
+  .daily-row {
+    grid-template-columns: 52px 36px minmax(0, 1fr) auto;
+    gap: 7px;
+    padding: 12px 0;
+  }
+
+  .day-name {
+    font-size: 11px;
+  }
+
+  .day-condition {
+    font-size: 10px;
+    min-width: 0;
+  }
+
+  .day-range {
+    font-size: 11px;
+    gap: 6px;
+  }
+
+  /* Air quality */
+  .aqi-layout {
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .aqi-score {
+    width: 76px;
+    height: 76px;
+    flex: 0 0 76px;
+  }
+
+  .aqi-score strong {
+    font-size: 24px;
+  }
+
+  .pollutants {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Weather details */
+  .metrics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Weather Intelligence */
+  .intelligence-panel {
+    padding: 16px;
+    margin-top: 14px;
+    border-radius: 15px;
+  }
+
+  .intelligence-panel .section-heading {
+    margin-bottom: 16px;
+  }
+
+  .intelligence-panel .section-heading h2 {
+    font-size: 18px;
+  }
+
+  .intelligence-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .intelligence-card {
+    min-height: 155px;
+    padding: 13px;
+  }
+
+  .intelligence-card-top {
+    margin-bottom: 15px;
+  }
+
+  .intelligence-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .intelligence-status {
+    max-width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .intelligence-value {
+    font-size: 21px;
+  }
+
+  .intelligence-card-content p {
+    font-size: 10px;
+  }
+
+  /* Smart Weather Alerts */
+  .weather-alerts {
+    margin-top: 14px;
+  }
+
+  .weather-alerts .section-heading {
+    gap: 12px;
+  }
+
+  .alerts-count {
+    min-width: 58px;
+  }
+
+  .weather-alert {
+    padding: 13px;
+    gap: 11px;
+  }
+
+  .weather-alert-header {
+    gap: 8px;
+  }
+
+  .weather-alert-header h3 {
+    font-size: 14px;
+  }
+
+  .weather-alert-message {
+    font-size: 10px;
+  }
+
+  /* Footer */
+  .footer {
+    width: 94vw;
+    padding: 18px 0 24px;
+    flex-direction: column;
+    gap: 7px;
+    line-height: 1.5;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .app-main {
+    width: 94vw;
+    padding-top: 18px;
+  }
+
+  .topbar {
+    padding: 10px 3vw;
+  }
+
+  .brand-name {
+    font-size: 14px;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  .nav-links a {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .hero-card {
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+
+  .hero-copy h1 {
+    font-size: 29px;
+  }
+
+  .hero-temp {
+    font-size: 55px;
+  }
+
+  .hero-mini-grid {
+    gap: 6px;
+  }
+
+  .hero-mini-grid div {
+    gap: 5px;
+  }
+
+  .hero-mini-grid span {
+    font-size: 9px;
+  }
+
+  .hero-mini-grid strong {
+    font-size: 10px;
+  }
+
+  .hero-visual {
+    min-height: 170px;
+  }
+
+  .weather-emoji-xl {
+    font-size: 85px;
+  }
+
+  .sun-orbit {
+    width: 170px;
+    height: 170px;
+  }
+
+  .sun-times {
+    gap: 10px;
+  }
+
+  /* Intelligence becomes one card per row */
+  .intelligence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intelligence-card {
+    min-height: 145px;
+  }
+
+  .intelligence-value {
+    font-size: 23px;
+  }
+
+  /* AQI */
+  .aqi-layout {
+    flex-direction: column;
+  }
+
+  .pollutants {
+    width: 100%;
+  }
+
+  /* Daily forecast */
+  .daily-row {
+    grid-template-columns: 48px 32px minmax(0, 1fr) auto;
+    gap: 5px;
+  }
+
+  /* Chart */
+  .chart-area {
+    height: 190px;
+  }
+
+  /* Alerts */
+  .weather-alerts .section-heading {
+    align-items: stretch;
+  }
+
+  .alerts-count {
+    align-self: flex-start;
+  }
+
+  .weather-alert {
+    align-items: flex-start;
+  }
+
+  .weather-alert-icon {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+  }
+
+  .no-weather-alerts {
+    padding: 14px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .hero-copy h1 {
+    font-size: 26px;
+  }
+
+  .hero-temp {
+    font-size: 49px;
+  }
+
+  .hero-mini-grid {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .hero-mini-grid div {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .intelligence-card {
+    padding: 12px;
+  }
+
+  .intelligence-value {
+    font-size: 21px;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pollutants {
+    grid-template-columns: 1fr 1fr;
+  }
+}
