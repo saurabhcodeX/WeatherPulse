@@ -1,38 +1,141 @@
-# WeatherPulse
+# 🌦️ WeatherPulse
 
-WeatherPulse is a React + Vite weather intelligence dashboard for live conditions, short-term trends, daily forecasts, air quality and saved locations.
+> Intelligent weather dashboard for real-time weather insights, forecasts, air quality, UV exposure, and smart weather alerts.
 
-## Features
+WeatherPulse is a modern React-based weather intelligence dashboard that goes beyond displaying temperature and forecasts. It combines live weather data with contextual analysis to help users understand current conditions and make better decisions about outdoor activities, travel, and weather-related risks.
 
-- Current weather with location-aware loading
-- City search and recent locations
-- Metric / imperial units
-- Hourly forecast timeline
-- Temperature trend chart
+## ✨ Features
+
+### 🌤️ Live Weather
+- Current temperature and weather conditions
+- Feels-like temperature
+- Humidity
+- Atmospheric pressure
+- Cloud coverage
+- Wind speed
+- Automatic location detection
+
+### 📊 Weather Forecast
+- Hourly weather forecast
 - Multi-day forecast
-- Air quality and pollutant summary
-- Favorite locations stored locally
-- Responsive dashboard layout
-- OpenWeather API integration through an environment variable
+- Temperature visualization
+- Weather trend charts
 
-## Run locally
+### 🧠 Weather Intelligence
+WeatherPulse analyzes live conditions and generates practical insights:
 
-1. Install Node.js 18+.
-2. Create `.env` from `.env.example`.
-3. Add your OpenWeather API key as `VITE_OPENWEATHER_API_KEY`.
-4. Run:
+- Rain risk
+- Outdoor activity suitability
+- Travel conditions
+- UV exposure
+- Air quality assessment
 
-```bash
-npm install
-npm run dev
-```
+### ☀️ Live UV Index
+UV data is retrieved using location coordinates and displayed dynamically with the weather intelligence system.
 
-For production verification:
+### 🚨 Smart Weather Alerts
+The application detects potentially important conditions such as:
 
-```bash
-npm run build
-```
+- Heavy rain
+- High temperature
+- Extreme heat
+- Strong winds
+- High UV exposure
+- Poor air quality
+- Thunderstorms
 
-## Attribution / provenance
+Each alert includes a severity level and a practical recommendation.
 
-This project was rebuilt and substantially redesigned from an existing weather-monitoring codebase. Review the original repository license and preserve any required attribution before public redistribution. The API key is intentionally not committed; use your own key through `.env`.
+### 🌫️ Air Quality
+Displays air-quality information alongside weather conditions to help users understand outdoor environmental conditions.
+
+### ⭐ Favorites & Recent Searches
+- Save favorite cities
+- Quickly access recently searched locations
+- Persistent preferences using browser local storage
+
+### 🌡️ Unit Switching
+Switch between:
+
+- Celsius
+- Fahrenheit
+
+### 📱 Responsive Interface
+Designed to work across:
+
+- Desktop
+- Tablet
+- Mobile
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React
+- JavaScript
+- React Router
+- CSS
+- React Icons
+- Chart.js
+- Framer Motion
+
+### APIs
+
+- OpenWeather API — weather, forecast, and air-quality data
+- Open-Meteo API — UV index data
+
+### Build Tools
+
+- Vite
+- npm
+- ESLint
+
+---
+
+## 🏗️ Project Architecture
+
+```text
+WeatherPulse
+│
+├── public/
+│   └── weather-icon.svg
+│
+├── src/
+│   │
+│   ├── api/
+│   │   ├── weatherService.js
+│   │   └── uvService.js
+│   │
+│   ├── components/
+│   │   ├── AirQuality.jsx
+│   │   ├── CurrentWeather.jsx
+│   │   ├── DailyForecast.jsx
+│   │   ├── Header.jsx
+│   │   ├── HourlyForecast.jsx
+│   │   ├── LocationInfo.jsx
+│   │   ├── WeatherAlerts.jsx
+│   │   ├── WeatherChart.jsx
+│   │   ├── WeatherDetails.jsx
+│   │   └── WeatherIntelligence.jsx
+│   │
+│   ├── context/
+│   │   └── WeatherContext.jsx
+│   │
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   └── ForecastPage.jsx
+│   │
+│   ├── utils/
+│   │   ├── weatherAlerts.js
+│   │   └── weatherIntelligence.js
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+│
+├── .env.example
+├── index.html
+├── package.json
+└── vite.config.js
